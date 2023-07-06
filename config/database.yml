@@ -1,0 +1,23 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: 12345678
+  database: rails_4_app
+  host: localhost
+  port: 3306
+
+development:
+  <<: *default
+  database: rails_4_app_development
+
+test:
+  <<: *default
+  database: rails_4_app_test
+
+production:
+  <<: *default
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>

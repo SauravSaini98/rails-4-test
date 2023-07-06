@@ -1,0 +1,3 @@
+# DESCRIPTION
+
+The sample application is used for the understanding of Rails 4.2 vulnerabilities.
